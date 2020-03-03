@@ -1,0 +1,23 @@
+.login-container{
+
+  /* background-color: grey; */
+}
+.login-outer-container{
+    padding-top: 140px;
+    margin: 10px;
+}
+.login-title{
+  padding: 20px;
+}
+.input-container{
+  padding-bottom: 30px;
+}
+.submit-button{
+ margin-top: 10px;
+}
+.MuiButtonBase-root {
+  margin-top: 8px!important;
+}
+.MuiButton-root{
+  padding: 7px 72px!important;
+}
