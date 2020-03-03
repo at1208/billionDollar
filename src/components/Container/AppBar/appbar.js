@@ -12,7 +12,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import './appbar.css';
-import Drawer from '../Drawer/drawer'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,13 +29,9 @@ const useStyles = makeStyles(theme => ({
 
 function MenuAppBar() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  const handleChange = event => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = event => {
     setAnchorEl(event.currentTarget);
@@ -49,13 +45,10 @@ function MenuAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon/>
-          </IconButton>
+
           <Typography variant="h6" className={classes.title}>
            Billion$
           </Typography>
-          {auth && (
             <div>
               <IconButton
                 aria-label="account of current user"
@@ -85,7 +78,6 @@ function MenuAppBar() {
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>
-          )}
         </Toolbar>
       </AppBar>
     </div>

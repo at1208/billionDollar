@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AppBar from '../../Common/AppBar/appbar';
+import AppBar from '../../Container/AppBar/appbar';
+import { Link } from 'react-router-dom';
 import './homepage.css';
 
 class HomePage extends Component {
@@ -10,9 +11,11 @@ class HomePage extends Component {
       const startupList = ['Kalakicar', 'MyTutor', 'Canteen', 'NearAuto']
       const list = startupList.map( item => {
       return <div className='text-center row col justify-content-center'>
-               <div className='startup-name shadow col-md-4 '>
+             <Link to={`dashboard/${item}`}>
+               <div className='startup-name col-md-4'>
                 {item}
                </div>
+             </Link>
              </div>
       })
       return list;

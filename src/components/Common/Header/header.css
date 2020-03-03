@@ -1,0 +1,10 @@
+.header{
+ padding: 10px;
+ background-color: lightblue;
+}
+.title{
+  /* margin: 10px; */
+  padding-left: 60px;
+  font-size: 25px;
+  /* font-weight: lighter; */
+}
